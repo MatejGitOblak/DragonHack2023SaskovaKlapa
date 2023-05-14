@@ -98,6 +98,7 @@ document.body.appendChild(textDiv);
     // Add click event listener to the big circle
     container.addEventListener("click", function(event) {
       clearPage();
+      
       let numCoins = 3;
       // Create a div element for the text
       const textDiv = document.createElement("div");
@@ -139,12 +140,6 @@ document.body.appendChild(textDiv);
   // Call the function with a given number of circles
   createButton(7);
 
-  function doTheThing() {
-    const khachingSound = new Audio('./sound/khaching.mp3');
-    khachingSound.play();
-    changePage();
-  }
-
   function changePage() {
     window.location.href = "./gg.html";
   }
@@ -166,7 +161,7 @@ document.body.appendChild(textDiv);
         if (i < numCircles - 1) {
             circle.innerHTML = '<img src="./imgs/euro_heads.png" style="width: 100%; height: 100%; object-fit: contain">';
         } else {
-            circle.innerHTML = '<img src="./imgs/euro_tails.png" style="width: 100%; height: 100%; object-fit: contain" onclick=doTheThing()>';
+            circle.innerHTML = '<img src="./imgs/euro_tails.png" style="width: 100%; height: 100%; object-fit: contain" onclick=changePage()>';
         }
         
         document.body.appendChild(circle);
