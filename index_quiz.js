@@ -26,7 +26,10 @@ respon.then(respon => x = respon.choices[0].text)
 .catch(err => console.log(err))
 
 respon.then(respon => x = respon.choices[0].text)
-.then(x => {if(x == 'undefined') {console.log('napaka')} else {document.getElementById('main2_h1').innerHTML = parseFloat(x.split('A:')[1]).toFixed(2)}})
+.then(x => {if(x == 'undefined') {console.log('napaka')} else {document.getElementById('mh1').innerHTML = parseFloat(x.split('A:')[1]).toFixed(3)}})
 .catch(err => console.log(err))
 
-document.getElementById('main3_h1').innerHTML = Math.random().toFixed(2);
+ 
+document.getElementById('mh2').innerHTML = Math.random().toFixed(2);
+document.getElementById('mh3').innerHTML = Math.random().toFixed(2);
+document.getElementById('mh4').innerHTML = Math.random().toFixed(2);

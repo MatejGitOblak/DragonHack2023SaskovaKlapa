@@ -1,0 +1,27 @@
+body {
+    background-color: #666766;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+}
+.question {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.answer {
+    background-color: #F2623A;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    transition: all 0.2s ease-in-out;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.answer:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
