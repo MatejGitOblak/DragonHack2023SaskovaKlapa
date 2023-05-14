@@ -1,0 +1,18 @@
+body {
+  background-image: url("Screenshot_1.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+#naslov {
+  text-align: center;
+}
+
+#bottom-right-img {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 200px;
+  height: 400px;
+}/*# sourceMappingURL=mouse.css.map */
