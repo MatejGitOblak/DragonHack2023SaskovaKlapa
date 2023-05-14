@@ -55,7 +55,7 @@ main {
 
 .specialCircle{
     cursor: pointer;
-
+    background-color: #FF8EEE;
     border-radius: 50%;
     position: absolute;
 }

@@ -98,12 +98,13 @@
     circle1.style.height = size + "px";
     circle1.style.left = getRandomNumber(0, window.innerWidth - size) + "px";
     circle1.style.top = getRandomNumber(0, window.innerHeight - size) + "px";
-    circle1.style.backgroundColor = getRandomColor();
+
     circle1.addEventListener('click', function() {
         circle1.classList.toggle('active');
         var audio = new Audio('ummsasa3.mp3');
         audio.play();
-
+        // setTimeout(() => {  console.log("World!"); }, 50000); -- HELP
+        window.location.href = "../mouse.html";
     });
 
     circle1.onclick = function() {

@@ -9,7 +9,7 @@ function moveImageFromRightToLeft() {
 
   function animate() {
     let currentRight = parseInt(window.getComputedStyle(image).getPropertyValue('right'));
-    let newRight = currentRight + 1;
+    let newRight = currentRight + 3;
     if (newRight <= leftEdge) {
       image.style.right = `${leftEdge}px`;
       return;
@@ -26,12 +26,14 @@ function moveImageFromRightToLeft() {
     if (newRight > leftEdge) {
       clearInterval(animationID);
       if (newRight > document.body.clientWidth) {
-        if(confirm('Good job!')){        
+        /*if(confirm('Good job!')){        
           console.log("1")
           ifInside = false;
           document.removeEventListener("mouseleave", moveImageFromRightToLeft) 
-          window.location.reload(); 
-        }
+          // window.location.reload();
+          
+        }*/
+        window.location.href = "./bridger.html";
       }
     }
   }
