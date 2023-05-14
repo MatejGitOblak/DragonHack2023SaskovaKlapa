@@ -45,6 +45,13 @@ function getRandomNumber(min, max) {
       var size = getRandomNumber(20, 150);
       circle.style.width = size + "px";
       circle.style.height = size + "px";
+
+      var divs = document.getElementsByClassName("circle");
+      for (var i = 0; i < divs.length; i++) {
+          divs[i].onclick = function() {
+              this.style.display = 'none';
+          }
+      }
       
       // Check if the new circle overlaps with any existing circles
       var overlaps = true;
@@ -58,6 +65,8 @@ function getRandomNumber(min, max) {
             tempAlert("To pa ni Sasko!",1000);
             var audio = new Audio('ben.mp3');
             audio.play();
+            circle.classList.toggle('active');
+
           });
         // Check if the new circle overlaps with any existing circles
         for (var j = 0; j < circles.length; j++) {
@@ -85,7 +94,11 @@ function getRandomNumber(min, max) {
         var audio = new Audio('ummsasa3.mp3');
         audio.play();
 
-      });
+    });
+
+    circle1.onclick = function() {
+        this.style.transform = 'scale(5)';
+    }
 
     circles.push(circle1);
     document.body.appendChild(circle1);
