@@ -41,8 +41,16 @@ function moveImageFromRightToLeft() {
   window.addEventListener('resize', animate);
 }
 
-document.addEventListener("mouseleave", function(event) {
-    moveImageFromRightToLeft();
+document.addEventListener("mousemove", function(event) {
+
+    //const x = event.clientX;
+    const y = event.clientY;
+    if(y > 10)
+      window.location.reload(); 
+    else
+      moveImageFromRightToLeft();
+    
 });
+
  
 
