@@ -1,7 +1,12 @@
-function getRandomNumber(min, max) {
+  let poskusi = 4;
+  
+
+  function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
   function tempAlert(msg, duration) {
     var el = document.createElement("div");
     el.className = "alert"
@@ -49,7 +54,12 @@ function getRandomNumber(min, max) {
       var divs = document.getElementsByClassName("circle");
       for (var i = 0; i < divs.length; i++) {
           divs[i].onclick = function() {
+              poskusi--;
+              console.log(poskusi);
               this.style.display = 'none';
+              if (poskusi == 0){  
+                location. reload()
+              }
           }
       }
       
@@ -62,7 +72,6 @@ function getRandomNumber(min, max) {
         circle.style.top = getRandomNumber(0, window.innerHeight - size) + "px";
         circle.style.backgroundColor = getRandomColor();
         circle.addEventListener('click', function() {
-            tempAlert("To pa ni Sasko!",1000);
             var audio = new Audio('ben.mp3');
             audio.play();
             circle.classList.toggle('active');
@@ -89,6 +98,7 @@ function getRandomNumber(min, max) {
     circle1.style.height = size + "px";
     circle1.style.left = getRandomNumber(0, window.innerWidth - size) + "px";
     circle1.style.top = getRandomNumber(0, window.innerHeight - size) + "px";
+    circle1.style.backgroundColor = getRandomColor();
     circle1.addEventListener('click', function() {
         circle1.classList.toggle('active');
         var audio = new Audio('ummsasa3.mp3');
@@ -98,6 +108,8 @@ function getRandomNumber(min, max) {
 
     circle1.onclick = function() {
         this.style.transform = 'scale(5)';
+      
+
     }
 
     circles.push(circle1);
